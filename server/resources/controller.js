@@ -1,7 +1,6 @@
 const mw = require('../config/middleware');
 const request = mw.request;
-const url = mw.urls.database;
-const utils = require('./utils/utils');
+const utils = require('./utils/kbUtils');
 
 module.exports = {
   pingEs: (req, res) => {
@@ -54,14 +53,13 @@ module.exports = {
   count: (req, res) => {
     utils.countAllDocuments()
       .then(resp => {
-        res.status(200).send(resp);
+        //res.status(200).send(resp);
       })
       .catch(err => {
         res.status(404).send(err);
       });
   },
   search: (req, res) => {
-    console.log('HERE IS THE QUERY',req.query);
     var options = {
       term: req.query.term,
       archived: req.query.archived,
@@ -72,7 +70,7 @@ module.exports = {
     }
     utils.basicSearch(options)
       .then(result => {
-        res.status(200).send(result.hits.hits);
+        res.status(200).send(JSON.stringify(result.hits.hits));
       })
       .catch(err => {
         res.status(404).send(err);

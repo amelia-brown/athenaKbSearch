@@ -3,7 +3,8 @@ let mongoose = require('mongoose');
 mongoose.Promise = global.Promise; //fixes depreciated mongoose promise by implementing ES6 promise.
 
 module.exports = {
-  urls: require('./urls.js'),
+  kbUrls: require('./kbUrls.js'),
+  ticketUrls: require('./ticketUrls.js'),
   express: require('express'),
   router: require('express').Router,
   mongoose: mongoose,

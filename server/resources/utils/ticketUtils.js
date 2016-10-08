@@ -66,7 +66,7 @@ module.exports = {
 
   getAllFromDb: (options) => {
     return new Promise((resolve, reject) => {
-      mw.mongodb.MongoClient.connect(mw.urls.masterDatabase, (err, db) => {
+      mw.mongodb.MongoClient.connect(mw.ticketUrls.masterDatabase, (err, db) => {
         if (err) { reject(err); }
         if (options) {
           db.collection('kbs').find().toArray((err, docs) => {
@@ -217,5 +217,4 @@ module.exports = {
       ignoreUnavailable: true,
       q: id
     })
-  };
-
+  }

@@ -1,4 +1,4 @@
-var utils = require('./utils');
+var utils = require('./kbUtils');
 var client = require('../../elasticsearch');
 var mw = require('../../config/middleware');
 

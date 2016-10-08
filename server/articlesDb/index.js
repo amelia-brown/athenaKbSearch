@@ -1,6 +1,6 @@
 'use strict'
 const mw = require('../config/middleware.js');
-const urls = mw.urls;
+const urls = mw.kbUrls;
 const chalk = mw.chalk;
 
 module.exports = mw.mongoose.connect(urls.database).connection

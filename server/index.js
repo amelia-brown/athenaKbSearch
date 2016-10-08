@@ -1,7 +1,7 @@
 'use strict'
 const mw = require('./config/middleware.js');
 //set port to default port or POST variable provided by user
-const port = process.argv[2] || mw.urls.default;
+const port = process.argv[2] || mw.kbUrls.default;
 
 //set server to listen to port
 

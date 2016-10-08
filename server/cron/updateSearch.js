@@ -1,4 +1,4 @@
-const utils = require('/server/resources/utils/utils');
+const utils = require('/server/resources/utils/kbUtils');
 const client = require('/server/elasticsearch');
 const mw = require('/server/config/middleware');
 
