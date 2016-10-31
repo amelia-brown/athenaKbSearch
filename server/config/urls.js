@@ -1,7 +1,7 @@
 'use strict'
 const DIALECT = 'postgres';//'postgres';
 const HOST = 'localhost';
-const MASTER_HOST = 'localhost';
+const MASTER_HOST = process.env.POSTGRES || 'localhost';
 const PORT = 5432;
 const KDB = 'kb';
 const TDB = 'ticket';
