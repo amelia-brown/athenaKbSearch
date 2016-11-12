@@ -1,13 +1,13 @@
 'use strict'
 const DIALECT = 'postgres';//'postgres';
 const HOST = 'localhost';
-const MASTER_HOST = process.env.POSTGRES || 'localhost';
+const MASTER_HOST = process.env.POSTGRES || '127.0.0.1';
 const PORT = 5432;
-const KDB = 'kb';
-const TDB = 'ticket';
-const DB = 'kbSearch';
-const DB_USR = require('./dbAuth.js').DB_USR;
-const DB_PASS = require('./dbAuth.js').DB_PASS;
+const KDB = process.env.POSTGRES_DB || 'kb';
+const TDB = process.env.POSTGRES_DB || 'ticket';
+const DB = process.env.POSTGRES_DB || 'kbSearch';
+const DB_USR = process.env.POSTGRES_USER || require('./dbAuth.js').DB_USR;
+const DB_PASS = process.env.POSTGRES_PASSWORD || require('./dbAuth.js').DB_PASS;
 // const DB_USR = require('./dbAuth.js').DB_USR;
 // const DB_PASS = require('./dbAuth.js').DB_PASS;
 //const TMASTER_DB = 'ticket';

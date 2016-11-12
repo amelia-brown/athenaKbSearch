@@ -5,4 +5,4 @@ COPY package.json /usr/src/athenaKbSearch/
 RUN npm install
 COPY . /usr/src/athenaKbSearch
 EXPOSE 3004
-RUN npm start
+CMD npm start
